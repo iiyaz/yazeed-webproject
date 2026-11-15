@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazeed Mohammad - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Yazeed Mohammad</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    </nav>
+
+    <!-- Home / Welcome Section -->
+    <header id="home" class="hero-section">
+        <div class="container">
+            <h1>Hello, I'm <span>Yazeed Mohammad</span></h1>
+            <h3>Software Engineering Student | University of Ha'il</h3>
+            <p>Welcome to my personal portfolio! Explore my skills, projects, and academic journey.</p>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-card">
+                <p>I am a Software Engineering student at the University of Ha'il passionate about web development, database systems, and software quality assurance.</p>
+                <p><strong>Email:</strong> yazeed.m@example.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="grid-container">
+                <div class="card skill-card">
+                    <h3>HTML5 &amp; CSS3</h3>
+                    <span class="badge">Advanced</span>
+                </div>
+                <div class="card skill-card">
+                    <h3>JavaScript (DOM &amp; Events)</h3>
+                    <span class="badge">Intermediate</span>
+                </div>
+                <div class="card skill-card">
+                    <h3>PHP &amp; MySQL</h3>
+                    <span class="badge">Intermediate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+                <button class="filter-btn" onclick="filterProjects('Web', this)">Web</button>
+                <button class="filter-btn" onclick="filterProjects('Testing', this)">Testing</button>
+            </div>
+            <div class="grid-container" id="projectsContainer">
+                <div class="card project-card" data-category="Web">
+                    <span class="category-tag">Web</span>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive dynamic portfolio website connected to MySQL using PHP.</p>
+                    <p class="tech-stack"><strong>Technologies:</strong> HTML, CSS, JS, PHP, MySQL</p>
+                </div>
+                <div class="card project-card" data-category="Testing">
+                    <span class="category-tag">Testing</span>
+                    <h3>Course Registration Testing</h3>
+                    <p>Automated unit testing and test suites for UCRS.</p>
+                    <p class="tech-stack"><strong>Technologies:</strong> Java, JUnit 5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <form name="contactForm" action="index.php" method="post" onsubmit="return validateContactForm()" class="contact-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+                <button type="submit" name="submit_contact" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Yazeed Mohammad - University of Ha'il</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
